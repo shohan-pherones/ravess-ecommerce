@@ -5,7 +5,7 @@ import {
   useQueryStates,
 } from "nuqs";
 
-const sortValues = ["curated", "trending", "hot_and_new"];
+export const sortValues = ["curated", "trending", "hot_and_new"] as const;
 
 const params = {
   sort: parseAsStringLiteral(sortValues).withDefault("curated"),

@@ -1,6 +1,6 @@
 "use client";
 
-import { DEFAULT_BG_COLOR } from "@/modules/home/constants";
+import { DEFAULT_BG_COLOR } from "@/constants";
 import { useTRPC } from "@/trpc/client";
 import { useSuspenseQuery } from "@tanstack/react-query";
 import { useParams } from "next/navigation";

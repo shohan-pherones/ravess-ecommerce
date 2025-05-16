@@ -1,5 +1,6 @@
-import { getPayload } from "payload";
 import config from "@payload-config";
+import { getPayload } from "payload";
+import { stripe } from "./lib/stripe";
 
 const categories = [
   {
@@ -152,13 +153,29 @@ const categories = [
 const seed = async () => {
   const payload = await getPayload({ config });
 
+  const adminAccount = await stripe.accounts.create({});
+
+  const adminTenant = await payload.create({
+    collection: "tenants",
+    data: {
+      name: "admin",
+      slug: "admin",
+      stripeAccountId: adminAccount.id,
+    },
+  });
+
   await payload.create({
     collection: "users",
     data: {
-      email: "admin@admin.com",
+      email: "admin@demo.com",
       password: "ABCabc123!",
       roles: ["super-admin"],
       username: "admin",
+      tenants: [
+        {
+          tenant: adminTenant.id,
+        },
+      ],
     },
   });
 

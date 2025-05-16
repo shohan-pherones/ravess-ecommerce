@@ -46,7 +46,7 @@ export const ProductCard = ({
             )}
             <p className="text-sm underline font-medium">{tenantSlug}</p>
           </div>
-          {reviewCount && (
+          {reviewCount > 0 && (
             <div className="flex items-center gap-1">
               <StarIcon className="size-3.5 fill-black" />
               <p className="text-sm font-medium">

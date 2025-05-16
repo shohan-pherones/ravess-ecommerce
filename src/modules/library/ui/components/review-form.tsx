@@ -98,7 +98,7 @@ const ReviewForm = ({ productId, initialData }: Props) => {
         onSubmit={form.handleSubmit(onSubmit)}
       >
         <p className="font-medium">
-          {isPreview ? "Your raing:" : "Liked it? Give it a rating"}
+          {isPreview ? "Your rating:" : "Liked it? Give it a rating"}
         </p>
         <FormField
           control={form.control}

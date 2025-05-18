@@ -8,6 +8,8 @@ interface Props {
   params: Promise<{ subcategory: string }>;
 }
 
+export const dynamic = "force-dynamic";
+
 const SubcategoryPage = async ({ params }: Props) => {
   const { subcategory } = await params;
   const filters = await loadProductFilters(params);

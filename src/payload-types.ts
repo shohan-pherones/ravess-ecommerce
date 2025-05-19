@@ -164,9 +164,6 @@ export interface Tenant {
    * This is the name of the store (e.g. Rebecca's Store)
    */
   name: string;
-  /**
-   * This is the subdomain for the store (e.g. [slug].ravess.com)
-   */
   slug: string;
   image?: (string | null) | Media;
   /**

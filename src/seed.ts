@@ -148,6 +148,20 @@ const categories = [
       { name: "Macro", slug: "macro" },
     ],
   },
+  {
+    name: "Gaming",
+    color: "#6C5CE7",
+    slug: "gaming",
+    subcategories: [
+      { name: "Action", slug: "action" },
+      { name: "Adventure", slug: "adventure" },
+      { name: "RPG", slug: "rpg" },
+      { name: "Shooter", slug: "shooter" },
+      { name: "Strategy", slug: "strategy" },
+      { name: "Simulation", slug: "simulation" },
+      { name: "Indie", slug: "indie" },
+    ],
+  },
 ];
 
 const seed = async () => {

@@ -108,7 +108,8 @@ export const SignUpView = () => {
                     className={cn("hidden", showPreview && "block")}
                   >
                     Your store will be available at&nbsp;
-                    <strong>{username}</strong>.ravess.com
+                    {process.env.NEXT_PUBLIC_APP_URL}/tenants/
+                    <strong>{username}</strong>
                   </FormDescription>
                   <FormMessage />
                 </FormItem>

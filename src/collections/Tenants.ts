@@ -29,10 +29,6 @@ export const Tenants: CollectionConfig = {
       access: {
         update: ({ req }) => isSuperAdmin(req.user),
       },
-      admin: {
-        description:
-          "This is the subdomain for the store (e.g. [slug].ravess.com)",
-      },
     },
     {
       name: "image",

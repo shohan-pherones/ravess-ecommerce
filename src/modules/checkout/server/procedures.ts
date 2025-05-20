@@ -126,7 +126,7 @@ export const checkoutRouter = createTRPCRouter({
         products.docs.map((product) => ({
           quantity: 1,
           price_data: {
-            unit_amount: product.price * 100,
+            unit_amount: +(product.price * 100).toFixed(2),
             currency: "usd",
             product_data: {
               name: product.name,
